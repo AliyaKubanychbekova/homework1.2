@@ -1,13 +1,15 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(checking(10, 23));
-        System.out.println(checking(11, 24));
-        System.out.println(checking(12, 25));
-        System.out.println(checking(13, 26));
-        System.out.println(checking(14, 27));
+
+        int i = random();
+        System.out.println(checking(i, 8));
+
+
     }
 
     public static String checking(int age, int temperature) {
@@ -21,7 +23,12 @@ public class Main {
             return " Оставайтесь дома";
         }
     }
+    public static int random(){
+        Random rand = new Random();
+        int old = rand.nextInt(49) + 1;
+        return old;
+    }
+
+
 }
-
-
 
